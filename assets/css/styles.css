@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Variáveis */
+:root {
+  --main-color: #9900cc;
+  --second-color: #FF6600;
+  --default-color: #1A2E35;
+  --white-color: #FFF;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, p, span, a {
+  font-family: 'Poppins', sans-serif;
+  color: var(--default-color);
+}
+
+/* Classes Globais */
+.container {
+  max-width: 1640px;
+  width: 100%;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-default {
+  display: inline-block;
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  color: var(--white-color);
+  font-weight: 700;
+  border-radius: 10px;
+  font-size: 1.313rem;
+  transition: ease-in-out 0.1s;
+}
+
+.btn-default:hover{
+  background-color: var(--second-color);
+}
+
+/*##############*/
+/* ## INÍCIO ## */
+
+#inicio {
+  background: url("../img/background-hero.png") no-repeat;
+  background-size: cover;
+}
+
+/* HEADER */
+#header {
+  width: 100%;
+  padding: 40px 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+#header #logo {
+  display: block;
+  width: 161px;
+  height: 90px;
+  background-image: url("../img/dcolor.png");
+}
+
+/* menu */
+#header #menu ul{
+  display: flex;
+}
+
+#header #menu .menu-item {
+  padding: 10px;
+  margin: 0 10px;
+}
+
+#header #menu .menu-item a {
+  font-size: 1.125rem;
+  color: var(--white-color);
+  transition: ease-in-out 0.1s;
+}
+
+#header #menu .menu-item a:hover {
+  color: var(--second-color);
+}
+
+/* Hero Content */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 45px;
+}
+
+#hero .hero-content {
+  max-width: 445px;
+}
+
+#hero .hero-content h1{
+  font-size: 2.563rem;
+  line-height: 3.188rem;
+  font-weight: 700;
+  color: var(--second-color);
+}
+
+#hero .hero-content h3 {
+  font-size: 1.313rem;
+  font-weight: 500;
+  color: var(--default-color);
+  margin: 20px 0;
+}
+
+#hero .hero-content h3 span{
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+#hero .hero-image img{
+  width: 100%;
+}
