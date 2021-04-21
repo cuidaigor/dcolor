@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, p, span, a {
 .menu-section #menu .menu-item a {
   font-size: 1.8rem;
   color: var(--white-color);
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.3s;
 }
 
 .menu-section #menu .menu-item a:hover {
@@ -337,4 +337,16 @@ h1, h2, h3, h4, h5, p, span, a {
   }
 
 
+}
+
+/* 425 Mobile Large */
+@media(max-width: 425px){
+
+  #header #logo{
+    display: block;
+    width: 120px;
+    height: 67.09px;
+    background-image: url("../img/dcolor.png") no-repeat;
+    background-size: 100% 100%;
+  }
 }
