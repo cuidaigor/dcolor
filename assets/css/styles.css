@@ -18,6 +18,15 @@
   list-style: none;
 }
 
+html {
+  /* Cada rem corresponde a 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 h1, h2, h3, h4, h5, p, span, a {
   font-family: 'Poppins', sans-serif;
   color: var(--default-color);
@@ -44,7 +53,7 @@ h1, h2, h3, h4, h5, p, span, a {
   color: var(--white-color);
   font-weight: 700;
   border-radius: 10px;
-  font-size: 1.313rem;
+  font-size: 2.1rem;
   transition: ease-in-out 0.1s;
 }
 
@@ -56,8 +65,10 @@ h1, h2, h3, h4, h5, p, span, a {
 /* ## INÍCIO ## */
 
 #inicio {
-  background: url("../img/background-hero.png") no-repeat;
-  background-size: cover;
+  background: url("../img/background-hero-2.png") no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 100vh;
 }
 
 /* HEADER */
@@ -78,22 +89,22 @@ h1, h2, h3, h4, h5, p, span, a {
 }
 
 /* menu */
-#header #menu ul{
+.menu-section #menu ul{
   display: flex;
 }
 
-#header #menu .menu-item {
+.menu-section #menu .menu-item {
   padding: 10px;
   margin: 0 10px;
 }
 
-#header #menu .menu-item a {
-  font-size: 1.125rem;
+.menu-section #menu .menu-item a {
+  font-size: 1.8rem;
   color: var(--white-color);
   transition: ease-in-out 0.1s;
 }
 
-#header #menu .menu-item a:hover {
+.menu-section #menu .menu-item a:hover {
   color: var(--second-color);
 }
 
@@ -102,22 +113,23 @@ h1, h2, h3, h4, h5, p, span, a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 45px;
 }
 
 #hero .hero-content {
   max-width: 445px;
+  margin-right: 15px;
 }
 
 #hero .hero-content h1{
-  font-size: 2.563rem;
-  line-height: 3.188rem;
+  font-size: 4.1rem;
+  line-height: 5.1rem;
   font-weight: 700;
   color: var(--second-color);
 }
 
 #hero .hero-content h3 {
-  font-size: 1.313rem;
+  font-size: 2.1rem;
+  line-height: 3.1rem;
   font-weight: 500;
   color: var(--default-color);
   margin: 20px 0;
@@ -128,6 +140,145 @@ h1, h2, h3, h4, h5, p, span, a {
   color: var(--main-color);
 }
 
+#hero .hero-image {
+  display: flex;
+  justify-content: center;
+}
+
 #hero .hero-image img{
   width: 100%;
+}
+
+
+/* ############################ */
+/* MEDIA QUERIES */
+
+/* 1400 */
+@media(max-width: 1400px){
+  #inicio{
+    background-size: 800px 100vh;
+  }
+}
+
+/* 1140 Laptop Large */
+@media(max-width: 1140px){
+
+  #inicio{
+    background-size: 800px 100vh;
+  }
+
+}
+
+/* 1024 Laptop */
+@media(max-width: 1024px){
+
+  html {
+    font-size: 55%;
+  }
+
+  #inicio {
+    background: none;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  .one, .two, .three {
+    background-color: var(--main-color);
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+  }
+
+  .menu-section.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--main-color);
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-section.on #menu {
+    display: block;
+  }
+
+  .menu-section.on .menu-toggle {
+    position: absolute;
+    right: 25px;
+    top: 65px;
+  }
+
+  .menu-section.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+    background-color: var(--white-color);
+  }
+
+  .menu-section.on .menu-toggle .two {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .menu-section.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(9px, -9px);
+    background-color: var(--white-color);
+  }
+
+  .menu-section.on #menu ul{
+    display: block;
+    text-align: center;
+  }
+
+  .menu-section.on #menu ul a {
+    transition-duration: 0.3s;
+    font-size: 2.5rem;
+    line-height: 6rem;
+    display: block;
+  }
+
+}
+
+/* 768 Tablet */
+@media(max-width: 768px){
+
+  html {
+    font-size: 50%;
+  }
+
+  .btn-default {
+    padding: 10px 15px;
+    font-weight: 500;
+  }
+
+  #hero {
+    flex-wrap: wrap-reverse;
+  }
+
+  #hero .hero-content {
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  #hero .hero-image {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+
 }
