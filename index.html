@@ -40,7 +40,7 @@
             </li>
 
             <li class="menu-item">
-              <a href="#">DESTAQUES</a>
+              <a href="#destaques">DESTAQUES</a>
             </li>
 
             <li class="menu-item">
@@ -91,7 +91,7 @@
 
       <div class="counter-card" data-animate="up">
         <i class="icon-printer"></i>
-        <h1>1.000</h1>
+        <h1 class="number">1.000</h1>
         <p>Impressões</p>
       </div>
 
@@ -152,10 +152,54 @@
 
   </div>
 
+  <div id="destaques" class="container">
+
+
+    <div class="tabs" data-animate="up">
+      <h1>Destaques</h1>
+
+      <div class="tab-links">
+        <button data-id="brindes" data-default>Brindes</button>
+        <button data-id="adesivos">Adesivos</button>
+        <button data-id="estampas">Estampas</button>
+      </div>
+
+      <div class="tab-content">
+
+        <section id="brindes">
+          <img src="assets/img/destaques/caneca.jpg" alt="Brindes personalizados">
+          <h2>Brindes Personalizados</h2>
+          <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum
+            tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando
+            uma misturou os caracteres de um texto para criar um espécime de livro.</p>
+        </section>
+
+        <section id="adesivos">
+          <img src="assets/img/destaques/adesivo.jpg" alt="Adesivos personalizados">
+          <h2>Adesivos Personalizados</h2>
+          <p>Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia
+            electrónica, mantendo-se essencialmente inalterada.</p>
+        </section>
+
+        <section id="estampas">
+          <img src="assets/img/destaques/almofada.jpg" alt="Estampas personalizados">
+          <h2>Estampas Personalizadas</h2>
+          <p>Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que
+            continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação
+            como o Aldus PageMaker que incluem versões do Lorem Ipsum.</p>
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
   <div style="height: 100vh;">
 
   </div>
 
+  <script src="assets/scripts/script.js"></script>
   <script src="assets/scripts/menu.js"></script>
   <script src="assets/scripts/animate.js"></script>
 </body>

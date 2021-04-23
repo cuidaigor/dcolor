@@ -27,7 +27,7 @@ body {
   font-size: 1.6rem;
 }
 
-h1, h2, h3, h4, h5, p, span, a {
+h1, h2, h3, h4, h5, p, span, a, input, button {
   font-family: 'Poppins', sans-serif;
   color: var(--default-color);
 }
@@ -331,6 +331,82 @@ h1, h2, h3, h4, h5, p, span, a {
   margin-left: 10px;
 }
 
+
+/*#################*/
+/* ## DESTAQUES ## */
+
+#destaques .tabs {
+  min-width: 320px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+#destaques .tabs h1 {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  text-align: center;
+  margin: 25px auto;
+}
+
+#destaques .tabs .tab-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#destaques .tabs .tab-links button {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+#destaques .tabs .tab-links button::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: var(--main-color);
+  transition: .4s;
+}
+
+#destaques .tabs .tab-links button:hover::after,
+#destaques .tabs .tab-links button.active::after  {
+  width: 100%;
+}
+
+#destaques .tabs .tab-content {
+  margin-top: 25px;
+}
+
+#destaques .tabs .tab-content img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#destaques .tabs .tab-content h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--main-color);
+}
+
+#destaques .tabs .tab-content p {
+  font-size: 1.6rem;
+}
+
+#destaques .tabs .tab-content>section {
+  animation: up 1s;
+}
+
+
+
 /* ############################ */
 /* MEDIA QUERIES */
 
@@ -556,4 +632,15 @@ h1, h2, h3, h4, h5, p, span, a {
 [data-animate].animate{
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+  }
 }
