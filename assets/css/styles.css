@@ -406,6 +406,63 @@ h1, h2, h3, h4, h5, p, span, a, input, button {
 }
 
 
+/*#################*/
+/* ## PORTFÓLIO ## */
+
+#portfolio {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#portfolio .title-section {
+  font-size: 3.5rem;
+  color: var(--second-color);
+  text-align: center;
+  margin: 25px auto;
+}
+
+#portfolio .images-portfolio figure img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+#portfolio .images-portfolio figure {
+  margin: 0;
+  display: flex;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  position: relative;
+}
+
+#portfolio .images-portfolio figure h1 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: var(--white-color);
+  background-color: rgba(0,0,0,.7);
+  bottom: 0;
+  left: 0;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+  opacity: 0;
+  transition: all 0.4s;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#portfolio .images-portfolio figure:hover h1 {
+  opacity: 1;
+
+}
+
+#portfolio .images-portfolio {
+  column-count: 4;
+  column-gap: 10px;
+}
+
 
 /* ############################ */
 /* MEDIA QUERIES */
@@ -570,6 +627,10 @@ h1, h2, h3, h4, h5, p, span, a, input, button {
   }
 
 
+  #portfolio .images-portfolio {
+    column-count: 3;
+    column-gap: 10px;
+  }
 }
 
 /* 744 */
@@ -605,6 +666,12 @@ h1, h2, h3, h4, h5, p, span, a, input, button {
 
   #solucoes .solutions .services .service-item p {
     font-size: 1.8rem;
+  }
+
+
+  #portfolio .images-portfolio {
+    column-count: 2;
+    column-gap: 5px;
   }
 }
 
