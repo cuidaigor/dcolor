@@ -48,7 +48,7 @@
             </li>
 
             <li class="menu-item">
-              <a href="#">CONTATO</a>
+              <a href="#contato">CONTATO</a>
             </li>
           </ul>
         </nav>
@@ -283,12 +283,45 @@
     </div>
   </div>
 
-  <div style="height: 100vh;">
+  <div class="container-fluid" id="contato" data-animate="up">
+    <div class="container">
+      <h1>Envie-nos uma mensagem</h1>
 
+      <form action="" class="contact-form">
+
+        <div class="input">
+          <input type="text" name="name" id="name" required>
+          <label for="name">Nome</label>
+          <span class="error"></span>
+        </div>
+
+        <div class="input">
+          <input type="email" name="email" id="email" required>
+          <label for="email">Email</label>
+          <span class="error"></span>
+        </div>
+
+        <div class="input">
+          <input type="text" name="phone" id="phone" required>
+          <label for="phone">Telefone</label>
+          <span class="error"></span>
+        </div>
+
+        <div class="input">
+          <input type="text" name="message" id="message" required>
+          <label for="message">Mensagem</label>
+          <span class="error"></span>
+        </div>
+
+        <button type="submit">Enviar mensagem</button>
+
+      </form>
+    </div>
   </div>
 
   <script src="assets/scripts/script.js"></script>
   <script src="assets/scripts/menu.js"></script>
   <script src="assets/scripts/animate.js"></script>
+  <script src="assets/scripts/contact.js"></script>
 </body>
 </html>
