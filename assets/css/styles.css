@@ -551,6 +551,38 @@ h1, h2, h3, h4, h5, p, span, a, input, button, label {
   padding: 0.4em;
 }
 
+
+/*#################*/
+/* ## RODAPÉ ## */
+
+#footer {
+  background-color: var(--main-color);
+}
+
+#footer footer {
+  padding-top: 3.0rem;
+  padding-bottom: 3.0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer p, #footer a {
+  font-size: 1.8rem;
+  color: var(--white-color);
+  text-align: center;
+}
+
+#footer a {
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+#footer a:hover {
+  color: var(--second-color);
+}
+
 /* ############################ */
 /* MEDIA QUERIES */
 
@@ -724,6 +756,18 @@ h1, h2, h3, h4, h5, p, span, a, input, button, label {
 @media(max-width: 744px){
   #solucoes .icons-counter .counter-card{
     margin: 25px
+  }
+}
+
+/* 665 */
+@media(max-width: 665px) {
+  #footer footer {
+    flex-wrap: wrap;
+  }
+
+  #footer footer .footer-left,  #footer footer .footer-right{
+    display: block;
+    margin: 2.0rem auto;
   }
 }
 
