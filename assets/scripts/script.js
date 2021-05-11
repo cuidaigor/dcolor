@@ -1,6 +1,5 @@
 //Puxando Counter Cards
-
-const response = [
+const responseCounterCards = [
   {
     name: "Impressões",
     icon: "icon-printer",
@@ -23,7 +22,7 @@ const response = [
   }
 ];
 
-showCounterCards(response);
+showCounterCards(responseCounterCards);
 
 function showCounterCards(cards) {
   let output = '';
@@ -37,4 +36,64 @@ function showCounterCards(cards) {
   }
 
   document.querySelector('.icons-counter').innerHTML = output;
+}
+
+
+//Puxando Portfólio
+const responsePortfolio = [
+  {
+    title: "Banner personalizado massoterapia",
+    image: "01.jpg"
+  },
+  {
+    title: "Caneca personalizada Grey's Anatomy",
+    image: "02.jpg"
+  },
+  {
+    title: "Caneca personalizada Harry Potter",
+    image: "03.jpg"
+  },
+  {
+    title: "Camisa personalizada",
+    image: "04.jpg"
+  },
+  {
+    title: "Camisa personalizada Jesus Cristo",
+    image: "05.jpg"
+  },
+  {
+    title: "Adesivo personalizado do Phillip",
+    image: "06.jpg"
+  },
+  {
+    title: "Agenda personalizada da Bianca",
+    image: "07.jpeg"
+  },
+  {
+    title: "Caderno personalizado Psicologia",
+    image: "08.jpg"
+  },
+  {
+    title: "Almofada personalizada Te amo mil milhões",
+    image: "09.jpg"
+  },
+  {
+    title: "Almofada personalizada Minha melhor metade",
+    image: "10.png"
+  }
+];
+
+showPortfolio(responsePortfolio);
+
+function showPortfolio(images) {
+  let output = '';
+
+  for(let image of images){
+    output += `<figure data-animate="up">
+                <h1>${image.title}</h1>
+                <img src="assets/img/portfolio/${image.image}" alt="${image.title}">
+              </figure>`;
+  }
+
+  document.querySelector('.images-portfolio').innerHTML = output;
 }
