@@ -85,6 +85,36 @@ for(field of fields) {
 }
 
 
+//Máscara de Telefone
+const phone = document.querySelector('#phone');
+
+phone.addEventListener("change", event => {
+  const valuePhone = event.target.value;
+
+  let newPhone = valuePhone.replace(/[^\d]+/g,'');
+
+  if(newPhone.length == 11) {
+    let finalPhone = newPhone.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, "($1) $2 $3-$4");
+    phone.value = finalPhone;
+  }
+
+  if(newPhone.length == 10) {
+    let finalPhone = newPhone.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
+    phone.value = finalPhone;
+  }
+
+  if(newPhone.length == 9){
+    let finalPhone = newPhone.replace(/(\d{1})(\d{4})(\d{4})/, "$1 $2-$3");
+    phone.value = finalPhone;
+  }
+
+  if(newPhone.length == 8){
+    let finalPhone = newPhone.replace(/(\d{4})(\d{4})/, "$1-$2");
+    phone.value = finalPhone;
+  }
+});
+
+
 //Envio do Formulário
 form.addEventListener("submit", event => {
   event.preventDefault();
